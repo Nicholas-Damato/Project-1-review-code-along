@@ -26,9 +26,9 @@ class AddMovie extends Component {
         return (
             <div>
                 <h2> Add Movie Form </h2>
-                <input value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} />
-                <input value={this.state.director} onChange={(e) => this.handleDirector(e.target.value)} />
-                <input value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} />
+                <input value={this.state.title} onChange={(e) => this.handleTitle(e.target.value)} placeholder="Title" />
+                <input value={this.state.director} onChange={(e) => this.handleDirector(e.target.value)} placeholder="Director" />
+                <input value={this.state.image} onChange={(e) => this.handleImage(e.target.value)} placeholder="Image URL" />
                 <button onClick={() => { this.props.addMovie(this.state.title, this.state.director, this.state.image) }}> Add Movie </button>
             </div>
         )
